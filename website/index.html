@@ -9,28 +9,46 @@
         body {
             font-family: futura;
             text-align: center;
+            color: plum;
         } 
         button {
             width: 30%;
             padding: 3%;
             border-radius: 5px;
+            border: none;
             margin: 0 auto;
             margin-top: 2%;
             display: flex;
             flex-direction: column;
+            color: ghostwhite;
+            font-size: 1.5em;
         }
+        .btn1 {
+            background-color: lightpink;
+        }
+        .btn2 {
+            background-color: cornflowerblue;
+        }
+        .btn3 {
+            background-color: lightseagreen;
+        }
+        .btn4 {
+            background-color: coral;
+        }
+
     </style>
 
 </head>
 
 <body>
+    <div id="everything">
     <h1>Change Colours</h1>
     
-    <button onclick="buttonPressed('red')">Red</button>
-    <button onclick="buttonPressed('blue')">Blue</button>
-    <button onclick="buttonPressed('lightseagreen')">Green</button>
-    <button onclick="buttonPressed('coral')">Coral</button>
-    
+    <button onclick="buttonPressed('lightpink')" class="btn1">Light Pink</button>
+    <button onclick="buttonPressed('cornflowerblue')" class="btn2">Cornflower Blue</button>
+    <button onclick="buttonPressed('lightseagreen')" class="btn3">Light Sea Green</button>
+    <button onclick="buttonPressed('coral')" class="btn4">Coral</button>
+    </div>
     <script src="/socket.io/socket.io.js"></script>
     <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
     
