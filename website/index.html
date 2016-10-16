@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>index Static Homepage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="/css/stylesheet.css">  -->
+
+    <style>
+        body {
+            font-family: futura;
+            text-align: center;
+        } 
+        button {
+            width: 30%;
+            padding: 3%;
+            border-radius: 5px;
+            margin: 0 auto;
+            margin-top: 2%;
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Change Colours</h1>
+    
+    <button onclick="buttonPressed('red')">Red</button>
+    <button onclick="buttonPressed('blue')">Blue</button>
+    <button onclick="buttonPressed('lightseagreen')">Green</button>
+    <button onclick="buttonPressed('coral')">Coral</button>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    
+    <script>
+        //Emitting!!
+        var socket = io();
+        // $('form').submit(function() {
+        //     socket.emit('button pressed', $('#m').val());
+        //     $('#m').val('');
+        //     return false;
+        // }); 
+
+        function buttonPressed(colour){
+            console.log("button pressed");
+            socket.emit('button pressed', colour);
+        }
+    </script>
+
+</body>
+
+</html>

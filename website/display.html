@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>DISPLAY Static Homepage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="/css/stylesheet.css">  -->
+
+    <style>
+        #body {
+            transition: background-color 5s ease;
+        }
+    </style>
+
+</head>
+
+<body id="body">
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+   
+    <script>
+        var socket = io();
+        // Listening!!
+        //Listen for the Message from the server
+        socket.on('button pressed', function (colour) {
+            // console.log("ya bitch!" + colour);
+            $("#body").css("background-color",colour);
+        });
+        
+    </script>
+
+</body>
+
+</html>
