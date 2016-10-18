@@ -2,11 +2,22 @@
 <html lang="en">
 
 <head>
-    <title>DISPLAY Static Homepage</title>
+    <title>More Drake - Display</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
+<<<<<<< HEAD
 
+=======
+        #body {
+            /* transition: background-color 5s ease; 
+            
+            I think you want .5s. 5s means five seconds and defeats the purpose of real-time
+            
+            */
+            transition: background-color .5s ease;
+        }
+>>>>>>> 83ceaef13ce1a65e385edb313f780104bc2829de
     </style>
 
 </head>
@@ -21,8 +32,29 @@
         // Listening!!
         //Listen for the Message from the server
         socket.on('button pressed', function (colour) {
-            // console.log("ya bitch!" + colour);
-            $("#body").css("background-color",colour);
+            // $("#body").css("background-color",colour);
+            /* $("#body").css("background-image", "url(../imgs/" + colour + ".gif");
+                the code above is if you want to pass the filename for the bg image through node
+            */
+            
+            // Or you could create a series of if / else if statements to change the bg colour based on the what colour is passed
+            if (colour == "lightpink") {
+                
+                $("#body").css("background-image", "url(../imgs/giphy-hotline.gif");
+                
+            } else if (colour == "cornflowerblue") {
+
+                $("#body").css("background-image", "url(../imgs/giphy-drake-snl.gif");
+
+            } else if (colour == "lightseagreen") {
+
+                $("#body").css("background-image", "url(../imgs/giphy-drake-running.gif");
+
+            } else if (colour == "coral") {
+
+                $("#body").css("background-image", "url(../imgs/giphy-young-drake.gif");
+            }     
+            
         });
         //Or would i make the different functions here???
     </script>

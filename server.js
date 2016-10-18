@@ -16,6 +16,7 @@ io.on('connection', function (socket) {
     
     socket.on('button pressed', function (msg) {
         io.emit('button pressed', msg);
+        console.log(msg);
     });
 
     socket.on('disconnect', function () {
